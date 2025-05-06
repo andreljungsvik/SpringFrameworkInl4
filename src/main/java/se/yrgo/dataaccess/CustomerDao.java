@@ -4,6 +4,7 @@ import java.util.List;
 
 import se.yrgo.domain.Call;
 import se.yrgo.domain.Customer;
+import se.yrgo.services.customers.CustomerNotFoundException;
 
 public interface CustomerDao {
 
@@ -23,5 +24,5 @@ public interface CustomerDao {
 	public Customer getFullCustomerDetail(String customerId) throws RecordNotFoundException;
 
 
-	public void addCall (Call newCall, String customerId) throws RecordNotFoundException;
+	public void addCall(Call newCall, String customerId) throws RecordNotFoundException;
 }

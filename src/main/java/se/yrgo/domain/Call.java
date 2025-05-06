@@ -1,7 +1,7 @@
 package se.yrgo.domain;
 
 import java.util.Date;
-
+import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,18 +20,16 @@ public class Call {
 
 	private String notes;
 
-	public Call(String notes){
-		// this defaults to a timestamp of "now"
-		this (notes, new java.util.Date());
+	public Call(String notes) {
+		this(notes, new java.util.Date());
 	}
 
-	public Call(String notes, Date timestamp){
-		// this defaults to a timestamp of "now"
+	public Call(String notes, Date timestamp) {
 		this.timeAndDate = timestamp;
 		this.notes = notes;
 	}
 
-	public String toString()	{
+	public String toString() {
 		return this.timeAndDate + " : " + this.notes;
 	}
 
@@ -41,6 +39,10 @@ public class Call {
 
 	public void setTimeAndDate(Date timeAndDate) {
 		this.timeAndDate = timeAndDate;
+	}
+
+	public void setTimeAndDate(LocalDateTime localDateTime) {
+		this.timeAndDate = java.sql.Timestamp.valueOf(localDateTime);
 	}
 
 	public String getNotes() {

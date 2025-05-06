@@ -34,6 +34,7 @@ public class SimpleClient {
         actions.add(action1);
         actions.add(action2);
 
+
         try {
             for (Action action : actions) {
                 callService.recordCall("CS03939", newCall, action);

@@ -13,11 +13,11 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
     <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
         <dependency>
             <groupId>org.springframework</groupId>
-             <artifactId>spring-context</artifactId>
-             <version>5.3.28</version>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.28</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
@@ -27,7 +27,6 @@
             <version>5.3.28</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/hsqldb/hsqldb -->
         <dependency>
             <groupId>hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
@@ -151,6 +150,11 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.9.0</version> <!-- Använd den senaste stabila versionen -->
+        </dependency>
 
 
     </dependencies>
@@ -159,7 +163,7 @@
 
         <resources>
             <resource>
-                    <directory>src/main/resources</directory>
+                <directory>src/main/resources</directory>
             </resource>
         </resources>
 
